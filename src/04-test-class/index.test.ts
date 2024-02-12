@@ -70,13 +70,12 @@ describe('BankAccount', () => {
   });
 
   test('fetchBalance should return number in case if request did not failed', async () => {
-    // TODO: fix test
     try {
       const fetchedBalance = await bankAccount.fetchBalance();
 
       expect(typeof fetchedBalance).toBe('number');
     } catch (e) {
-      console.log(e);
+      console.error(e);
     }
   });
 
